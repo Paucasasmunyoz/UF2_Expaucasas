@@ -5,6 +5,7 @@ const fs1 = require('node:fs')
 const stream = require('stream')
 const mysql = require('mysql2')
 const Sequelize = require('sequelize')
+const bodyParser = require('body-parser');
 
 //prova
 app.use(cors());
@@ -89,8 +90,8 @@ app.get('/llista-assig-info', (req, res) => {
 
 
 //EX3
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 app.put('/modificar-departament', (req, res) => {
   const id = req.body.id;
