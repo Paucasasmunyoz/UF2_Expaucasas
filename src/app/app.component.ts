@@ -46,7 +46,7 @@ export class AppComponent {
   }
 
   addVirgenCampo(): void {
-    this.http.post('/add-alumn-virgen', {}).subscribe(
+    this.http.post('http://localhost:3080/add-alumn-virgen', {}).subscribe(
       (response: any) => {
         console.log(response);
       },

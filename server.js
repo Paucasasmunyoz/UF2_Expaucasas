@@ -11,9 +11,13 @@ const bodyParser = require('body-parser');
 app.use(cors());
 app.use(express.json());
 port = 3080;
+app.listen(port, () => {
+  console.log(`Server listening on the port::${port}`);
+});
 
 let connexio_BD;
 let conexioMySQL;
+
 
 
 fs1.readFile('connexioBD', 'utf8', function (err, data) {
